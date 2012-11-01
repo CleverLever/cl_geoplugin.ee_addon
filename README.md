@@ -13,6 +13,7 @@ Locates a user.
 #### Parameters
 
 + ip_address
+
   Specify a users email address. Default: Current user's ip.
 
 #### Variables
