@@ -12,11 +12,12 @@ Locates a user.
 
 #### Parameters
 
-ip_address
-Specify a users email address. Default: Current user's ip.
++ ip_address
+  Specify a users email address. Default: Current user's ip.
 
 #### Variables
 
+```
 {ip}
 {city}
 {region}
@@ -29,3 +30,4 @@ Specify a users email address. Default: Current user's ip.
 {currency_code}
 {currency_symbol}
 {currency_converter}
+```
