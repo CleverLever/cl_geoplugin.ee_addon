@@ -27,7 +27,7 @@ class Eedfw_geoplugin
 		$data[0]['country_code']       = $this->geoplugin->countryCode;
 		$data[0]['country_name']       = $this->geoplugin->countryName;
 		$data[0]['continent_code']     = $this->geoplugin->continentCode;
-		$data[0]['latitude']           = $this->geoplugin->latitute;
+		$data[0]['latitude']           = $this->geoplugin->latitude;
 		$data[0]['longitude']          = $this->geoplugin->longitude;
 		$data[0]['currency_code']      = $this->geoplugin->currencyCode;
 		$data[0]['currency_symbol']    = $this->geoplugin->currencySymbol;
