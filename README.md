@@ -26,7 +26,7 @@ Locates a user.
 {dma_code}
 {country_name}
 {continent_code}
-{latitute}
+{latitude}
 {longitude}
 {currency_code}
 {currency_symbol}
