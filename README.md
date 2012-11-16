@@ -31,7 +31,13 @@ Locates a user.
 {currency_code}
 {currency_symbol}
 {currency_converter}
-{nearby}{/nearby}
+{nearby}
+    {nearby_city}
+    {nearby_region}
+    {nearby_country_code}
+    {nearby_latitude}
+    {nearby_longitude}
+{/nearby}
 ```
 
 

@@ -6,7 +6,7 @@ class Eedfw_geoplugin
 	private $settings;
 	private $ip_address;
 	private $geoplugin;
-	private $data = array();
+
 
 	public function __construct()
 	{
@@ -23,23 +23,25 @@ class Eedfw_geoplugin
 
 	public function locate()
 	{
-		$this->data[0]['ip']                 = $this->geoplugin->ip;
-		$this->data[0]['city']               = $this->geoplugin->city;
-		$this->data[0]['region']             = $this->geoplugin->region;
-		$this->data[0]['area_code']          = $this->geoplugin->areaCode;
-		$this->data[0]['dma_code']           = $this->geoplugin->dmaCode;
-		$this->data[0]['country_code']       = $this->geoplugin->countryCode;
-		$this->data[0]['country_name']       = $this->geoplugin->countryName;
-		$this->data[0]['continent_code']     = $this->geoplugin->continentCode;
-		$this->data[0]['latitude']           = $this->geoplugin->latitude;
-		$this->data[0]['longitude']          = $this->geoplugin->longitude;
-		$this->data[0]['currency_code']      = $this->geoplugin->currencyCode;
-		$this->data[0]['currency_symbol']    = $this->geoplugin->currencySymbol;
-		$this->data[0]['currency_converter'] = $this->geoplugin->currencyConverter;
-		
-		$this->data[0]['nearby'] 			 = $this->_nearby($radius, $limit);
+		$data = array();
 
-		return $this->EE->TMPL->parse_variables($this->EE->TMPL->tagdata, $this->data);
+		$data[0]['ip']                 = $this->geoplugin->ip;
+		$data[0]['city']               = $this->geoplugin->city;
+		$data[0]['region']             = $this->geoplugin->region;
+		$data[0]['area_code']          = $this->geoplugin->areaCode;
+		$data[0]['dma_code']           = $this->geoplugin->dmaCode;
+		$data[0]['country_code']       = $this->geoplugin->countryCode;
+		$data[0]['country_name']       = $this->geoplugin->countryName;
+		$data[0]['continent_code']     = $this->geoplugin->continentCode;
+		$data[0]['latitude']           = $this->geoplugin->latitude;
+		$data[0]['longitude']          = $this->geoplugin->longitude;
+		$data[0]['currency_code']      = $this->geoplugin->currencyCode;
+		$data[0]['currency_symbol']    = $this->geoplugin->currencySymbol;
+		$data[0]['currency_converter'] = $this->geoplugin->currencyConverter;
+		
+		$data[0]['nearby'] 			 = $this->_nearby();
+
+		return $this->EE->TMPL->parse_variables($this->EE->TMPL->tagdata, $data);
 	}
 	
 	public function nearby($radius = 10, $limit = 10)
@@ -87,17 +89,18 @@ class Eedfw_geoplugin
 	
 	private function _nearby($radius = 10, $limit = 10)
 	{
+		$data = array();
 		$nearbys = $this->geoplugin->nearby($radius, $limit);
 
 		$row = 0;
 		foreach ($nearbys as $nearby) {
-			$this->data[$row]['city'] 			= $nearby['geoplugin_place'];
-			$this->data[$row]['region'] 			= $nearby['geoplugin_region'];
-			$this->data[$row]['country_code'] 	= $nearby['geoplugin_countryCode'];
-			$this->data[$row]['latitude']			= $nearby['geoplugin_latitude'];
-			$this->data[$row]['longitude']		= $nearby['geoplugin_longitude'];
+			$data[$row]['nearby_city'] 			= $nearby['geoplugin_place'];
+			$data[$row]['nearby_region'] 			= $nearby['geoplugin_region'];
+			$data[$row]['nearby_country_code'] 	= $nearby['geoplugin_countryCode'];
+			$data[$row]['nearby_latitude']		= $nearby['geoplugin_latitude'];
+			$data[$row]['nearby_longitude']		= $nearby['geoplugin_longitude'];
 			$row++;
 		}
-	 	return $this->data;
+	 	return $data;
 	}
 }
