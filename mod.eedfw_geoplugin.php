@@ -66,7 +66,7 @@ class Eedfw_geoplugin
 		
 		$data = FALSE;
 		foreach ($nearbys as $nearby) {
-			if ($nearby['city'] == $city && $nearby['region'] == $region && $nearby['country_code'] == $country_code) {
+			if ($nearby['nearby_city'] == $city && $nearby['nearby_region'] == $region && $nearby['nearby_country_code'] == $country_code) {
 				$data = TRUE;
 				break;
 			}
@@ -95,7 +95,7 @@ class Eedfw_geoplugin
 		$row = 0;
 		foreach ($nearbys as $nearby) {
 			$data[$row]['nearby_city'] 			= $nearby['geoplugin_place'];
-			$data[$row]['nearby_region'] 			= $nearby['geoplugin_region'];
+			$data[$row]['nearby_region'] 		= $nearby['geoplugin_region'];
 			$data[$row]['nearby_country_code'] 	= $nearby['geoplugin_countryCode'];
 			$data[$row]['nearby_latitude']		= $nearby['geoplugin_latitude'];
 			$data[$row]['nearby_longitude']		= $nearby['geoplugin_longitude'];
