@@ -77,15 +77,15 @@ class Eedfw_geoplugin
 	
 	public function city() 					{ return $this->geoplugin->city; }
 	public function region() 				{ return $this->geoplugin->region; }	
-	public function area_code() 			{ return $this->geoplugin->area_code; }
-	public function dma_code() 				{ return $this->geoplugin->dma_code; }
-	public function country_code() 			{ return $this->geoplugin->country_code; }
-	public function continent_code() 		{ return $this->geoplugin->continent_code; }
+	public function area_code() 			{ return $this->geoplugin->areaCode; }
+	public function dma_code() 				{ return $this->geoplugin->dmaCode; }
+	public function country_code() 			{ return $this->geoplugin->countryCode; }
+	public function continent_code() 		{ return $this->geoplugin->continentCode; }
 	public function latitude() 				{ return $this->geoplugin->latitude; }
 	public function longitude() 			{ return $this->geoplugin->longitude; }
-	public function currency_code() 		{ return $this->geoplugin->currency_code; }
-	public function currency_symbol() 		{ return $this->geoplugin->currency_symbol; }
-	public function currency_converter() 	{ return $this->geoplugin->currency_converter; }
+	public function currency_code() 		{ return $this->geoplugin->currencyCode; }
+	public function currency_symbol() 		{ return $this->geoplugin->currencySymbol; }
+	public function currency_converter() 	{ return $this->geoplugin->currencyConverter; }
 	
 	private function _nearby($radius = 10, $limit = 10)
 	{

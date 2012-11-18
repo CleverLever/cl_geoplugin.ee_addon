@@ -25,6 +25,7 @@ Locates a user.
 {area_code}
 {dma_code}
 {country_name}
+{country_code}
 {continent_code}
 {latitude}
 {longitude}
