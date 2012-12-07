@@ -50,11 +50,37 @@ Locates a user.
 {/nearby}
 ```
 
+#### Examples
+
+In your template this is how you'd get the current user's city and state.
+
+```
+{exp:eedfw_geoplugin:locate}
+You are in {city}, {region}.
+{/exp:eedfw_geoplugin:locate}
+```
+
+```
+You are in Seattle, WA.
+```
 
 ### {exp:eedfw_geoplugin:variable}
 
 Returns any of the variables available via the {exp:eedfw_geoplugin:locate} tag pair.
 
+#### Parameters
+
++ ip_address (default: user's ip_address)
+
+  An ip address to geolocate.
+
+#### Examples
+
+In your template this is how you'd get the current user's currency symbol.
+
+```
+{exp:eedfw_geoplugin:currency_symbol}
+```
 
 ### {exp:eedfw_geoplugin:is_nearby}
 
