@@ -3,6 +3,15 @@ EEdfw Geoplugin
 
 Module to return a user's geolocation information via the GeoPlugin service (http://www.geoplugin.com/).
 
+Installation
+-----
+
+In your system/expressionengine/third_party directory run the following command.
+
+```
+git clone https://github.com/eedfw/eedfw_geoplugin.git
+```
+
 Usage
 -----
 
