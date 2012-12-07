@@ -82,6 +82,10 @@ In your template this is how you'd get the current user's currency symbol.
 {exp:eedfw_geoplugin:currency_symbol}
 ```
 
+```
+$
+```
+
 ### {exp:eedfw_geoplugin:is_nearby}
 
 Returns true or false whether the specified ip_address is in the nearby list that GeoPlugin provides.
