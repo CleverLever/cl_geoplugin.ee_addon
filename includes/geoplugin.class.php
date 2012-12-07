@@ -66,13 +66,8 @@ class geoPlugin {
 		
 		$data = array();
 		
-		error_log($host);
-		
 		$response = $this->fetch($host);
-		error_log($response);
 		$data = unserialize($response);
-		
-		error_log($data);
 		
 		//set the geoPlugin vars
 		$this->ip = $ip;
