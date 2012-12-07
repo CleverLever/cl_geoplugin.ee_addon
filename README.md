@@ -6,7 +6,7 @@ Module to return a user's geolocation information via the GeoPlugin service (htt
 Installation
 -----
 
-In your system/expressionengine/third_party directory run the following command.
+In your system/expressionengine/third_party directory run the following command (you can also manually extract the files into eedfw_geoplugin).
 
 ```
 git clone https://github.com/eedfw/eedfw_geoplugin.git
