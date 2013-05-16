@@ -5,6 +5,7 @@ class Eedfw_Geoplugin_mcp
 	
 	public function __construct() {
 		$this->EE =& get_instance();
+		$this->EE->load->add_package_path(PATH_THIRD.'/eedfw_geoplugin');
 		$this->EE->load->helper('form');
 		
 		$this->EE->load->model('Eedfw_geoplugin_settings_model');

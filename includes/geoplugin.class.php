@@ -133,7 +133,7 @@ class geoPlugin {
 	
 	function nearby($radius=10, $limit=null) {
 
-		if ( !is_numeric($this->latitude) || !is_numeric($this->longitude) ) {
+		if ( @!is_numeric($this->latitude) || @!is_numeric($this->longitude) ) {
 			trigger_error ('geoPlugin class Warning: Incorrect latitude or longitude values.', E_USER_NOTICE);
 			return array( array() );
 		}

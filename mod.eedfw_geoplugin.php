@@ -11,6 +11,7 @@ class Eedfw_geoplugin
 	public function __construct()
 	{
 		$this->EE =& get_instance();
+		$this->EE->load->add_package_path(PATH_THIRD.'/eedfw_geoplugin');
 		$this->EE->load->model('Eedfw_geoplugin_settings_model');
 
 		$this->settings = $this->EE->Eedfw_geoplugin_settings_model->get();

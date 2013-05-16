@@ -13,6 +13,7 @@ class Eedfw_geoplugin_upd {
 
 	public function __construct() {
 		$this->EE =& get_instance();
+		$this->EE->load->add_package_path(PATH_THIRD.'/eedfw_geoplugin');
 		$this->EE->load->library('logger');
 
 		$this->EE->load->model('Eedfw_geoplugin_settings_model');
