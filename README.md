@@ -9,7 +9,7 @@ Installation
 In your system/expressionengine/third_party directory run the following command (you can also manually extract the files into cl_geoplugin).
 
 ```
-git clone https://github.com/cl/cl_geoplugin.git
+git clone https://github.com/cleverlever/cl_geoplugin.git
 ```
 
 Usage
