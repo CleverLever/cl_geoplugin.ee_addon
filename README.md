@@ -1,4 +1,4 @@
-EEdfw Geoplugin
+Geoplugin
 ===============
 
 Module to return a user's geolocation information via the GeoPlugin service (http://www.geoplugin.com/).
@@ -6,16 +6,16 @@ Module to return a user's geolocation information via the GeoPlugin service (htt
 Installation
 -----
 
-In your system/expressionengine/third_party directory run the following command (you can also manually extract the files into eedfw_geoplugin).
+In your system/expressionengine/third_party directory run the following command (you can also manually extract the files into cl_geoplugin).
 
 ```
-git clone https://github.com/eedfw/eedfw_geoplugin.git
+git clone https://github.com/cl/cl_geoplugin.git
 ```
 
 Usage
 -----
 
-### {exp:eedfw_geoplugin:locate}
+### {exp:cl_geoplugin:locate}
 
 Locates a user.
 
@@ -55,18 +55,18 @@ Locates a user.
 In your template this is how you'd get the current user's city and state.
 
 ```
-{exp:eedfw_geoplugin:locate}
+{exp:cl_geoplugin:locate}
 You are in {city}, {region}.
-{/exp:eedfw_geoplugin:locate}
+{/exp:cl_geoplugin:locate}
 ```
 
 ```
 You are in Seattle, WA.
 ```
 
-### {exp:eedfw_geoplugin:variable}
+### {exp:cl_geoplugin:variable}
 
-Returns any of the variables available via the {exp:eedfw_geoplugin:locate} tag pair.
+Returns any of the variables available via the {exp:cl_geoplugin:locate} tag pair.
 
 #### Parameters
 
@@ -79,14 +79,14 @@ Returns any of the variables available via the {exp:eedfw_geoplugin:locate} tag 
 In your template this is how you'd get the current user's currency symbol.
 
 ```
-{exp:eedfw_geoplugin:currency_symbol}
+{exp:cl_geoplugin:currency_symbol}
 ```
 
 ```
 $
 ```
 
-### {exp:eedfw_geoplugin:is_nearby}
+### {exp:cl_geoplugin:is_nearby}
 
 Returns true or false whether the specified ip_address is in the nearby list that GeoPlugin provides.
 

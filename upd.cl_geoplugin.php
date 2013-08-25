@@ -1,11 +1,11 @@
 <?php
-class Eedfw_geoplugin_upd {
+class Cl_geoplugin_upd {
 
-	public $name = "Eedfw_geoplugin";
+	public $name = "Cl_geoplugin";
 	public $version = "1.0.0";
 	public $description = "";
 	public $settings_exist = "y";
-	public $docs_url = "http://eedfw.us/products/geoplugin";
+	public $docs_url = "http://cl.us/products/geoplugin";
 
 	var $settings			= array();
 
@@ -13,10 +13,10 @@ class Eedfw_geoplugin_upd {
 
 	public function __construct() {
 		$this->EE =& get_instance();
-		$this->EE->load->add_package_path(PATH_THIRD.'/eedfw_geoplugin');
+		$this->EE->load->add_package_path(PATH_THIRD.'/cl_geoplugin');
 		$this->EE->load->library('logger');
 
-		$this->EE->load->model('Eedfw_geoplugin_settings_model');
+		$this->EE->load->model('Cl_geoplugin_settings_model');
 	}
 
 	function install() {
@@ -42,7 +42,7 @@ class Eedfw_geoplugin_upd {
 		}
 		
 		// install settings
-		$this->EE->Eedfw_geoplugin_settings_model->create_table();
+		$this->EE->Cl_geoplugin_settings_model->create_table();
 
 		return TRUE;
 
@@ -52,7 +52,7 @@ class Eedfw_geoplugin_upd {
 		$this->EE->db->delete('modules', array('module_name' => $this->name));
 		$this->EE->db->like('class', $this->name, 'after')->delete('actions');
 		
-		$this->EE->Eedfw_geoplugin_settings_model->drop_table();
+		$this->EE->Cl_geoplugin_settings_model->drop_table();
 
 		return TRUE;
 	}

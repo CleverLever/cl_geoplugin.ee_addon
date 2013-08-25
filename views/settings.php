@@ -1,4 +1,4 @@
-<?=form_open('C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=eedfw_geoplugin'.AMP.'method=settings')?>
+<?=form_open('C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=cl_geoplugin'.AMP.'method=settings')?>
 <table class="mainTable" border="0" cellspacing="0" cellpadding="0">
 	<tr><th colspan="2">Global Settings</th></tr>
 	<tr>

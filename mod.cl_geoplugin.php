@@ -1,7 +1,7 @@
 <?php
 require_once('includes/geoplugin.class.php');
 
-class Eedfw_geoplugin
+class Cl_geoplugin
 {
 	private $settings;
 	private $ip_address;
@@ -11,10 +11,10 @@ class Eedfw_geoplugin
 	public function __construct()
 	{
 		$this->EE =& get_instance();
-		$this->EE->load->add_package_path(PATH_THIRD.'/eedfw_geoplugin');
-		$this->EE->load->model('Eedfw_geoplugin_settings_model');
+		$this->EE->load->add_package_path(PATH_THIRD.'/cl_geoplugin');
+		$this->EE->load->model('Cl_geoplugin_settings_model');
 
-		$this->settings = $this->EE->Eedfw_geoplugin_settings_model->get();
+		$this->settings = $this->EE->Cl_geoplugin_settings_model->get();
 		$this->geoplugin = new geoPlugin();
 		
 		$this->ip_address = $this->EE->TMPL->fetch_param('ip_address', $this->EE->input->ip_address());

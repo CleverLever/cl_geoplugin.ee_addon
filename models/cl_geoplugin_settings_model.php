@@ -1,9 +1,9 @@
 <?php
-require_once(__DIR__.'/eedfw_geoplugin_model.php');
+require_once(__DIR__.'/cl_geoplugin_model.php');
 
-class Eedfw_geoplugin_settings_model extends Eedfw_geoplugin_model
+class Cl_geoplugin_settings_model extends Cl_geoplugin_model
 {
-	protected $table = "eedfw_geoplugin_settings";
+	protected $table = "cl_geoplugin_settings";
 	protected $table_fields = array(
 		'site_id'	=> array(
 			'type'			=> 'int',
