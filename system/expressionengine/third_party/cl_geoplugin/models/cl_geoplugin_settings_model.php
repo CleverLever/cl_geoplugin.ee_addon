@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/cl_geoplugin_model.php');
+require_once(dirname(__FILE__).'/cl_geoplugin_model.php');
 
 class Cl_geoplugin_settings_model extends Cl_geoplugin_model
 {
