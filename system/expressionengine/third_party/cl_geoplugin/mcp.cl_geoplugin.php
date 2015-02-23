@@ -16,7 +16,7 @@ class Cl_Geoplugin_mcp
 	}
 	
 	public function settings() {
-		$this->EE->cp->set_variable('cp_page_title', lang('Cl_geoplugin_module_name'));
+		$this->EE->view->cp_page_title = lang('cl_geoplugin_module_name');
 
 		if (!empty($_POST)) {
 			foreach ($_POST['settings'] as $key => $value) {
